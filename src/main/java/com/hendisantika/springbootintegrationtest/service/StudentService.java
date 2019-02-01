@@ -38,6 +38,10 @@ public class StudentService {
         return savedStudents;
     }
 
+    public Iterable<Student> getAllStudents() {
+        return repository.findAll();
+    }
+
     public Student retrieveStudent(Integer studentId) {
         return repository.findById(studentId).orElse(new Student());
 
